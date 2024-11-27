@@ -30,8 +30,8 @@ class Solution:
 
 def main():
     sol = Solution()
-    # print(sol.moveZeroes([0, 1, 0, 3, 12]))
-    # print(sol.moveZeroes([0]))
+    print(sol.moveZeroes([0, 1, 0, 3, 12]))
+    print(sol.moveZeroes([0]))
     print(sol.moveZeroes([0, 0, 1]))
 
 

@@ -12,6 +12,8 @@ Notice that you may not slant the container.
 import sys
 from typing import List
 
+from format_utils import format_solution
+
 
 class Solution:
     def maxArea(self, height: List[int]) -> int:
@@ -83,17 +85,11 @@ def main():
     sol = Solution()
 
     res = sol.maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])
-    prettySolutionFormat(49, res)
+    format_solution([1, 8, 6, 2, 5, 4, 8, 3, 7], 49, res)
     res = sol.maxArea([1, 1])
-    prettySolutionFormat(1, res)
+    format_solution([1, 1], 1, res)
     res = sol.maxArea([2, 1])
-    prettySolutionFormat(1, res)
-
-
-def prettySolutionFormat(expected, actual):
-    print(
-        f"[{"V" if actual == expected else "X"}] Expected {expected}, Output {actual}"
-    )
+    format_solution([2, 1], 1, res)
 
 
 if __name__ == "__main__":

@@ -14,6 +14,8 @@ It can be shown that the resulting string will always be unique.
 
 """
 
+from format_utils import format_solution
+
 
 class Solution:
     def removeStars(self, s: str) -> str:
@@ -25,11 +27,6 @@ class Solution:
             if len(newStr) > 0:
                 newStr = newStr[:-1]
         return newStr
-
-
-def format_solution(input, expected, actual):
-    is_answer_correct = expected == actual
-    return f"{'+++' if is_answer_correct else '---'} Input: {input} - Expected: {expected} - Actual: {actual}"
 
 
 if __name__ == "__main__":

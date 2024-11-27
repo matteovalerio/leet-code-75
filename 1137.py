@@ -6,6 +6,8 @@ T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.
 Given n, return the value of Tn.
 """
 
+from format_utils import format_solution
+
 
 class Solution:
     def tribonacci(self, n: int) -> int:
@@ -21,11 +23,6 @@ class Solution:
             prev_items.pop(0)
             prev_items.append(current)
         return prev_items[0] + prev_items[1] + prev_items[2]
-
-
-def format_solution(input, expected, actual):
-    is_answer_correct = expected == actual
-    return f"{'+++' if is_answer_correct else '---'} Input: {input} - Expected: {expected} - Actual: {actual}"
 
 
 def main():

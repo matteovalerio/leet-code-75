@@ -13,6 +13,8 @@ Two asteroids moving in the same direction will never meet
 
 from typing import List
 
+from format_utils import format_solution
+
 """
 first approach: brute force
  def asteroidCollision(self, asteroids: List[int]) -> List[int]:
@@ -79,14 +81,9 @@ class Solution:
         return newList
 
 
-def format_solution(input, expected, actual):
-    is_answer_correct = expected == actual
-    return f"{'+++' if is_answer_correct else '---'} Input: {input} - Expected: {expected} - Actual: {actual}"
-
-
 if __name__ == "__main__":
     sol = Solution()
-    """
+
     input = [5, 10, -5]
     expected = [5, 10]
     print(format_solution(input, expected, sol.asteroidCollision(input)))
@@ -99,7 +96,6 @@ if __name__ == "__main__":
     input = [10, -4, 2, -5]
     expected = [10]
     print(format_solution(input, expected, sol.asteroidCollision(input)))
-    """
     input = [-2, -2, 1, -2]
     expected = [-2, -2, -2]
     print(format_solution(input, expected, sol.asteroidCollision(input)))

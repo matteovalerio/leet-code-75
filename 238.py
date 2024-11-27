@@ -7,6 +7,8 @@
 import copy
 from typing import List
 
+from format_utils import format_solution
+
 
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
@@ -33,13 +35,16 @@ class Solution:
 
 def main():
     sol = Solution()
-    print("input [1,2,3,4]")
-    print("expected [24,12,8,6]")
-    print(sol.productExceptSelf([1, 2, 3, 4]))
-    # print("###########")
-    # print("input [-1,1,0,-3,3]")
-    # print("expected [0,0,9,0,0]")
-    # print(sol.productExceptSelf([-1, 1, 0, -3, 3]))
+    print(
+        format_solution(
+            [1, 2, 3, 4], [24, 12.8, 6], sol.productExceptSelf([1, 2, 3, 4])
+        )
+    )
+    print(
+        format_solution(
+            [-1, 1, 0, -3, 3], [0, 0, 9, 0, 0], sol.productExceptSelf([-1, 1, 0, -3, 3])
+        )
+    )
 
 
 if __name__ == "__main__":
